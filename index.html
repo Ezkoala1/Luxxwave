@@ -45,6 +45,7 @@
                 sans-serif;
 
             color: var(--text);
+
             background:
                 radial-gradient(
                     circle at 50% -10%,
@@ -82,9 +83,9 @@
                 );
         }
 
-        /* =========================================================
-           NAVIGATION
-           ========================================================= */
+        /* =========================
+           NAV
+           ========================= */
 
         nav {
             position: fixed;
@@ -93,7 +94,6 @@
             right: 0;
 
             height: 72px;
-
             z-index: 100;
 
             display: flex;
@@ -115,13 +115,13 @@
 
             font-size: 14px;
             font-weight: 850;
+
             letter-spacing: 0.10em;
         }
 
         .nav-brand img {
             width: 32px;
             height: 32px;
-
             object-fit: contain;
         }
 
@@ -147,9 +147,9 @@
             transform: translateY(-1px);
         }
 
-        /* =========================================================
+        /* =========================
            HERO
-           ========================================================= */
+           ========================= */
 
         .hero {
             min-height: 100vh;
@@ -203,7 +203,6 @@
 
         .badge {
             display: inline-flex;
-            align-items: center;
 
             padding: 7px 13px;
 
@@ -217,7 +216,6 @@
             color: #aaaab2;
 
             font-size: 12px;
-            letter-spacing: 0.03em;
 
             margin-bottom: 20px;
         }
@@ -262,11 +260,13 @@
             color: var(--muted);
 
             font-size: 17px;
+
             line-height: 1.7;
         }
 
         .buttons {
             display: flex;
+
             justify-content: center;
             align-items: center;
 
@@ -277,6 +277,7 @@
 
         .button {
             display: inline-flex;
+
             align-items: center;
             justify-content: center;
 
@@ -302,9 +303,6 @@
         .button-primary {
             background: white;
             color: #09090b;
-
-            box-shadow:
-                0 0 0 rgba(255,255,255,0);
         }
 
         .button-primary:hover {
@@ -319,7 +317,8 @@
             background:
                 rgba(255,255,255,0.045);
 
-            border: 1px solid var(--border);
+            border:
+                1px solid var(--border);
         }
 
         .button-secondary:hover {
@@ -327,9 +326,9 @@
                 rgba(255,255,255,0.08);
         }
 
-        /* =========================================================
+        /* =========================
            SECTIONS
-           ========================================================= */
+           ========================= */
 
         section {
             width: min(1080px, 90%);
@@ -363,9 +362,9 @@
             letter-spacing: -0.04em;
         }
 
-        /* =========================================================
+        /* =========================
            FEATURES
-           ========================================================= */
+           ========================= */
 
         .features {
             display: grid;
@@ -383,7 +382,8 @@
 
             background: var(--panel);
 
-            border: 1px solid var(--border);
+            border:
+                1px solid var(--border);
 
             backdrop-filter: blur(14px);
 
@@ -434,9 +434,9 @@
             line-height: 1.6;
         }
 
-        /* =========================================================
+        /* =========================
            ACCESS
-           ========================================================= */
+           ========================= */
 
         .access {
             max-width: 620px;
@@ -451,7 +451,8 @@
 
             background: var(--panel);
 
-            border: 1px solid var(--border);
+            border:
+                1px solid var(--border);
 
             backdrop-filter: blur(18px);
         }
@@ -526,6 +527,7 @@
             color: #09090b;
 
             font-family: inherit;
+
             font-size: 14px;
             font-weight: 800;
 
@@ -562,9 +564,9 @@
             color: var(--danger);
         }
 
-        /* =========================================================
+        /* =========================
            DOWNLOAD
-           ========================================================= */
+           ========================= */
 
         #downloadArea {
             display: none;
@@ -639,9 +641,9 @@
             font-size: 11px;
         }
 
-        /* =========================================================
+        /* =========================
            FOOTER
-           ========================================================= */
+           ========================= */
 
         footer {
             display: flex;
@@ -674,9 +676,9 @@
             color: white;
         }
 
-        /* =========================================================
+        /* =========================
            MOBILE
-           ========================================================= */
+           ========================= */
 
         @media (max-width: 700px) {
 
@@ -722,9 +724,9 @@
 
 <body>
 
-    <!-- =========================================================
+    <!-- =========================
          NAVIGATION
-         ========================================================= -->
+         ========================= -->
 
     <nav>
 
@@ -738,6 +740,7 @@
             <span>LUXXWAVE</span>
 
         </div>
+
 
         <div class="nav-links">
 
@@ -762,9 +765,9 @@
     </nav>
 
 
-    <!-- =========================================================
+    <!-- =========================
          MAIN
-         ========================================================= -->
+         ========================= -->
 
     <main>
 
@@ -1000,6 +1003,7 @@
                             spellcheck="false"
                         >
 
+
                         <button
                             id="verifyButton"
                             class="verify-button"
@@ -1022,8 +1026,8 @@
                         <a
                             id="downloadButton"
                             class="download-button"
-                            href="#"
-                            onclick="downloadClient(event)"
+                            href="luxxwave.jar"
+                            download="luxxwave.jar"
                         >
                             Download Luxxwave
                         </a>
@@ -1043,9 +1047,9 @@
     </main>
 
 
-    <!-- =========================================================
+    <!-- =========================
          FOOTER
-         ========================================================= -->
+         ========================= -->
 
     <footer>
 
@@ -1064,27 +1068,14 @@
     </footer>
 
 
-    <!-- =========================================================
+    <!-- =========================
          JAVASCRIPT
-         ========================================================= -->
+         ========================= -->
 
     <script>
 
         /*
-         * ========================================================
          * TEMPORARY FRIEND KEYS
-         * ========================================================
-         *
-         * Add your friends' keys here.
-         *
-         * Example:
-         *
-         * "LUXX-FRIEND-003",
-         * "LUXX-FRIEND-004"
-         *
-         * IMPORTANT:
-         * These keys are visible in the page source.
-         * This is suitable for temporary/demo access only.
          */
 
         const VALID_KEYS = [
@@ -1099,40 +1090,30 @@
 
 
         /*
-         * ========================================================
-         * DOWNLOAD URL
-         * ========================================================
-         *
-         * Put your actual client download URL here later.
-         *
-         * Example:
-         *
-         * const DOWNLOAD_URL =
-         *     "https://example.com/Luxxwave.jar";
-         */
-
-        const DOWNLOAD_URL = "#";
-
-
-        /*
-         * ========================================================
          * VERIFY KEY
-         * ========================================================
          */
 
         function verifyKey() {
 
             const input =
-                document.getElementById("keyInput");
+                document.getElementById(
+                    "keyInput"
+                );
 
             const button =
-                document.getElementById("verifyButton");
+                document.getElementById(
+                    "verifyButton"
+                );
 
             const status =
-                document.getElementById("status");
+                document.getElementById(
+                    "status"
+                );
 
             const downloadArea =
-                document.getElementById("downloadArea");
+                document.getElementById(
+                    "downloadArea"
+                );
 
 
             const enteredKey =
@@ -1140,10 +1121,6 @@
                     .trim()
                     .toUpperCase();
 
-
-            /*
-             * Empty key
-             */
 
             if (!enteredKey) {
 
@@ -1160,10 +1137,6 @@
                 return;
             }
 
-
-            /*
-             * Valid key
-             */
 
             if (VALID_KEYS.includes(enteredKey)) {
 
@@ -1187,10 +1160,6 @@
             }
 
 
-            /*
-             * Invalid key
-             */
-
             status.textContent =
                 "Invalid access key.";
 
@@ -1205,35 +1174,7 @@
 
 
         /*
-         * ========================================================
-         * DOWNLOAD
-         * ========================================================
-         */
-
-        function downloadClient(event) {
-
-            event.preventDefault();
-
-
-            if (DOWNLOAD_URL === "#") {
-
-                alert(
-                    "The Luxxwave download link has not been configured yet."
-                );
-
-                return;
-            }
-
-
-            window.location.href =
-                DOWNLOAD_URL;
-        }
-
-
-        /*
-         * ========================================================
          * ENTER KEY SUPPORT
-         * ========================================================
          */
 
         document
